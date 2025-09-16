@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import NextAuthSessionProvider from "@/lib/NextAuthSessionProvider";
 import ReduxProvider from "@/redux/ReduxProvider";
+import SplashCursor from "@/components/shared/Spouse";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Toaster position="bottom-right" richColors />
         <NextAuthSessionProvider>
           <ReduxProvider>{children}</ReduxProvider>
+          <SplashCursor />
         </NextAuthSessionProvider>
       </body>
     </html>
